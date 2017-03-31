@@ -21,7 +21,7 @@ class Player {
   constructor() {
     this.dims = { x: 50, y: 50 };
     this.position = {
-      x: (Math.random() * (800 - (this.dims.x * 0.5))) + this.dims.x,
+      x: Math.random() * (800 - this.dims.x),
       y: 600 - this.dims.y,
     };
     this.jumpTime = 0;

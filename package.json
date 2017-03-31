@@ -1,0 +1,42 @@
+{
+  "name": "syncing-3",
+  "version": "1.0.0",
+  "engines": {
+    "node": "7.3.0",
+    "npm": "3.10.10"
+  },
+  "description": "syncing 3",
+  "main": "./src/server.js",
+  "scripts": {
+    "addLint": "npm install --save-dev eslint eslint-config-airbnb eslint-plugin-import",
+    "build": "babel ./client --out-file ./hosted/bundle.js",
+    "watch": "babel --watch ./client --out-file ./hosted/bundle.js",
+    "nodemon": "nodemon --watch ./src ./src/server.js",
+    "start": "node ./src/server.js",
+    "pretest": "eslint --fix ./src",
+    "test": "echo \"Tests complete\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/budjmt/syncing-3.git"
+  },
+  "author": "Michael Cohen",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/budjmt/syncing-3/issues"
+  },
+  "homepage": "https://github.com/budjmt/syncing-3#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.2.2",
+    "eslint": "^3.16.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "path": "^0.12.7",
+    "socket.io": "^1.7.3"
+  }
+}
